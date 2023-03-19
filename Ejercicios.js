@@ -100,16 +100,61 @@ const palabrasOrdenadas = ordenarPalabras(palabras);
 console.log(palabrasOrdenadas);
 
 //* 6. Crear una función que tome dos objetos y devuelva un objeto con las propiedades de ambos objetos.
+function combinarObjetos(obj1, obj2) {
+  return Object.assign({}, obj1, obj2);
+}
 
+const obj1 = {a: 1, b: 2};
+const obj2 = {c: 3, d: 4};
+const objCombinado = combinarObjetos(obj1, obj2);
+console.log(objCombinado);
 
 //* 7. Crear una función que tome un array de números y devuelva la suma de todos los números.
+function sumarNumeros(numeros) {
+  let suma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    suma += numeros[i];
+  }
+  return suma;
+}
 
+const numeros7 = [1, 2, 3, 4, 5];
+const sumaTotal = sumarNumeros(numeros7);
+console.log(sumaTotal);
 
 //* 8. Crear una función que tome un array de números y devuelva un array con los mismos números, pero multiplicados por un valor dado.
+function multiplicarArrayPorValor(array, valor) {
+  // Crea un nuevo array para almacenar los resultados
+  const resultado = [];
+  
+  // Recorre el array original y multiplica cada elemento por el valor dado
+  for (let i = 0; i < array.length; i++) {
+    resultado.push(array[i] * valor);
+  }
+  
+  // Devuelve el array resultante
+  return resultado;
+}
 
+const miArray2 = [1, 2, 3, 4, 5];
+const miValor2 = 2;
+const arrayMultiplicado = multiplicarArrayPorValor(miArray2, miValor2);
+console.log(arrayMultiplicado);
 
 //* 9. Crear una función que tome una cadena de texto y devuelva la misma cadena en orden inverso.
+function reverseString(str) {
+  return str.split('').reverse().join('');
+}
 
+let miCadena = "¡Ravenfield, el mejor juego de la historia!";
+let cadenaInversa = reverseString(miCadena);
+console.log(cadenaInversa);
 
 //* 10. Crear una función que tome un objeto y devuelva un array de sus claves.
+function getKeys(obj) {
+  return Object.keys(obj);
+}
 
+let miObjeto2 = { nombre: "Diego", edad: 19, profesion: "Diseñador grafico" };
+let claves = getKeys(miObjeto2);
+console.log(claves);
